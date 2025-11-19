@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Acceso denegado')"></head>
+<body class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+
+<div class="max-w-md w-full bg-white rounded-2xl shadow-lg p-6 space-y-4 text-center">
+  <div class="text-6xl font-bold text-red-500">403</div>
+  <h1 class="text-2xl font-semibold text-gray-900">Acceso denegado</h1>
+
+  <p class="text-sm text-gray-600">
+    No tienes permisos para acceder a esta sección del sistema.
+    Si crees que se trata de un error, contacta al administrador.
+  </p>
+
+  <div class="pt-2 flex flex-col gap-2">
+    <button
+      type="button"
+      onclick="history.back()"
+      class="w-full rounded-lg border border-gray-300 text-sm text-gray-700 py-2 hover:bg-gray-100">
+      Volver atrás
+    </button>
+
+    <a th:href="@{/panel}"
+       class="w-full inline-flex justify-center rounded-lg bg-indigo-600 text-white text-sm font-medium py-2 hover:bg-indigo-700">
+      Ir al panel principal
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

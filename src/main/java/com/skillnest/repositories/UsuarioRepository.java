@@ -1,0 +1,11 @@
+package com.skillnest.repositories;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.skillnest.models.Usuario;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, String> {
+    Optional<Usuario> findByUsername(String username);
+}
